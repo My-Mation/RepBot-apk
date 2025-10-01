@@ -5,81 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RepBot - AI-Powered Fitness Tracking App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>RepBot</h1>
-        <p>AI-Powered Fitness Tracking Application</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>RepBot</h1>
+            <p>AI-Powered Fitness Tracking Application</p>
+        </header>
 
-    <section id="intro">
-        <h2>About RepBot</h2>
-        <p>RepBot is a Flutter app that uses AI-powered pose detection to automatically count exercise repetitions in real-time via the device's camera. Track your workouts effortlessly with advanced machine learning technology.</p>
-    </section>
+        <section id="intro">
+            <h2>About RepBot</h2>
+            <p>RepBot is a Flutter-based fitness tracking application that uses AI-powered pose detection to automatically count exercise repetitions in real-time using your device’s camera. It combines computer vision, local data tracking, and AI analysis to give users a complete fitness experience — from form practice to personalized recommendations.</p>
+        </section>
 
-    <section id="features">
-        <h2>Core Features</h2>
+        <section id="features">
+            <h2>Features</h2>
 
-        <div class="feature">
-            <h3>Exercise Counters</h3>
-            <ul>
-                <li><strong>Push-up Counter:</strong> Tracks push-ups by detecting shoulder and collarbone movement. Counts reps with a 1-second cooldown.</li>
-                <li><strong>Pull-up Counter:</strong> Monitors pull-ups by calculating distance between body center and hands.</li>
-                <li><strong>Squat Counter:</strong> Uses knee angle calculations to detect squats.</li>
-                <li><strong>Dumbbell Curl Counter:</strong> Tracks bicep curls by measuring elbow angles.</li>
-            </ul>
-            <p>Each counter includes live rep count, camera preview with skeleton overlay, status text, FPS, and diagnostics.</p>
-        </div>
+            <div class="feature">
+                <h3>Core</h3>
+                <ul>
+                    <li><strong>Push-up Counter:</strong> Detects push-up reps using shoulder, collarbone, and ankle positions.</li>
+                    <li><strong>Pull-up Counter:</strong> Tracks pull-ups by measuring hand–body center distance.</li>
+                    <li><strong>Squat Counter:</strong> Uses knee angles to detect correct squat form.</li>
+                    <li><strong>Dumbbell Curl Counter:</strong> Detects elbow angle changes for bicep curls.</li>
+                    <li><strong>Free Play Mode:</strong> Skeleton overlay without rep counting for practicing form.</li>
+                </ul>
+            </div>
 
-        <div class="feature">
-            <h3>Free Play Mode</h3>
-            <p>A practice mode with camera preview and full-body skeleton overlay, perfect for form practice without tracking.</p>
-        </div>
+            <div class="feature">
+                <h3>Progress Tracking</h3>
+                <ul>
+                    <li><strong>Daily Tracker:</strong> Shows today’s total reps per exercise in a simple report.</li>
+                    <li><strong>Streak Tracking:</strong> Tracks consecutive days of workouts and resets if missed.</li>
+                </ul>
+            </div>
 
-        <div class="feature">
-            <h3>Daily Tracker</h3>
-            <p>Displays today's total reps for each exercise in a dialog. Updates dynamically after workouts.</p>
-        </div>
+            <div class="feature">
+                <h3>AI-Powered</h3>
+                <ul>
+                    <li><strong>AI Fitness Analyzer:</strong> Collects user data (age, height, weight, goals, etc.) + workout logs and sends to backend for personalized insights.</li>
+                    <li><strong>Tutorial Slides:</strong> Step-by-step guide on camera placement and exercise setup for accurate detection.</li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="feature">
-            <h3>Streak Tracking</h3>
-            <p>Calculates and displays your current exercise streak. Shows historical logs with details.</p>
-        </div>
+        <section id="technical">
+            <h2>Technical Details</h2>
+            <div class="feature">
+                <h3>Pose Detection</h3>
+                <ul>
+                    <li>Built on Google ML Kit’s pose detection (real-time skeleton tracking).</li>
+                    <li>Supports major landmarks: shoulders, elbows, wrists, hips, knees, ankles.</li>
+                    <li>Handles rotations & YUV420 → NV21 conversion for camera frames.</li>
+                </ul>
+            </div>
+            <div class="feature">
+                <h3>Repetition Counting</h3>
+                <ul>
+                    <li><strong>Push-ups:</strong> Down → Up transitions with cooldown.</li>
+                    <li><strong>Pull-ups:</strong> Distance thresholds vs. shoulder–hip baseline.</li>
+                    <li><strong>Squats:</strong> Knee angles (below 100° = down, above 160° = up).</li>
+                    <li><strong>Curls:</strong> Elbow angles (below 70° = up, above 150° = down).</li>
+                </ul>
+            </div>
+             <div class="feature">
+                <h3>Local Data Storage</h3>
+                <ul>
+                    <li>SharedPreferences for exercise logs & streak data.</li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="feature">
-            <h3>AI Fitness Analyzer</h3>
-            <p>Collects user data and sends to a backend API for personalized AI analysis and feedback.</p>
-        </div>
+        <section id="tech-stack">
+            <h2>Tech Stack</h2>
+            <div class="feature">
+                <ul>
+                    <li><strong>Frontend:</strong> Flutter</li>
+                    <li><strong>ML & Vision:</strong> Google ML Kit Pose Detection</li>
+                    <li><strong>Persistence:</strong> SharedPreferences</li>
+                    <li><strong>Backend (AI Analysis):</strong> REST API</li>
+                </ul>
+            </div>
+        </section>
 
-        <div class="feature">
-            <h3>Tutorial</h3>
-            <p>Interactive slideshow with instructions for each exercise and AI analysis.</p>
-        </div>
-    </section>
+        <section id="download">
+            <a href="https://github.com/My-Mation/RepBot-apk/releases/download/v1.0.0/app-release.apk" id="download-btn" download>Download RepBot APK</a>
+        </section>
 
-    <section id="technical">
-        <h2>Technical Features</h2>
-        <ul>
-            <li>Google ML Kit Pose Detection for real-time skeleton tracking</li>
-            <li>Local data logging and storage using SharedPreferences</li>
-            <li>Front camera processing with high resolution</li>
-            <li>Dark theme UI with responsive design</li>
-            <li>Wakelock to prevent screen timeout</li>
-            <li>Debug mode and error handling</li>
-        </ul>
-    </section>
-
-    <section id="download">
-        <a href="https://github.com/My-Mation/RepBot-apk/releases/download/v1.0.0/app-release.apk" download>
-            Download RepBot APK
-        </a>
-
-    </section>
-
-    <footer>
-        <p>&copy; 2023 RepBot. Built with Flutter and AI.</p>
-    </footer>
-
-    <script src="script.js"></script>
+        <footer>
+            <p>&copy; 2023 RepBot. Built with Flutter and AI. View on <a href="https://github.com/My-Mation/fitness-app" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
 </body>
 </html>
