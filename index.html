@@ -13,88 +13,95 @@
             <h1>RepBot</h1>
             <p>AI-Powered Fitness Tracking Application</p>
         </header>
-
+        
         <section id="intro">
             <h2>About RepBot</h2>
             <p>RepBot is a Flutter-based fitness tracking application that uses AI-powered pose detection to automatically count exercise repetitions in real-time using your device’s camera. It combines computer vision, local data tracking, and AI analysis to give users a complete fitness experience — from form practice to personalized recommendations.</p>
         </section>
-
-        <section id="features">
+        
+        <section>
             <h2>Features</h2>
-
-            <div class="feature">
-                <h3>Core</h3>
-                <ul>
-                    <li><strong>Push-up Counter:</strong> Detects push-up reps using shoulder, collarbone, and ankle positions.</li>
-                    <li><strong>Pull-up Counter:</strong> Tracks pull-ups by measuring hand–body center distance.</li>
-                    <li><strong>Squat Counter:</strong> Uses knee angles to detect correct squat form.</li>
-                    <li><strong>Dumbbell Curl Counter:</strong> Detects elbow angle changes for bicep curls.</li>
-                    <li><strong>Free Play Mode:</strong> Skeleton overlay without rep counting for practicing form.</li>
-                </ul>
-            </div>
-
-            <div class="feature">
-                <h3>Progress Tracking</h3>
-                <ul>
-                    <li><strong>Daily Tracker:</strong> Shows today’s total reps per exercise in a simple report.</li>
-                    <li><strong>Streak Tracking:</strong> Tracks consecutive days of workouts and resets if missed.</li>
-                </ul>
-            </div>
-
-            <div class="feature">
-                <h3>AI-Powered</h3>
-                <ul>
-                    <li><strong>AI Fitness Analyzer:</strong> Collects user data (age, height, weight, goals, etc.) + workout logs and sends to backend for personalized insights.</li>
-                    <li><strong>Tutorial Slides:</strong> Step-by-step guide on camera placement and exercise setup for accurate detection.</li>
-                </ul>
+            <div id="features">
+                <div class="feature">
+                    <h3>Core</h3>
+                    <ul>
+                        <li><strong>Push-up Counter:</strong> Detects push-up reps using shoulder, collarbone, and ankle positions.</li>
+                        <li><strong>Pull-up Counter:</strong> Tracks pull-ups by measuring hand–body center distance.</li>
+                        <li><strong>Squat Counter:</strong> Uses knee angles to detect correct squat form.</li>
+                        <li><strong>Dumbbell Curl Counter:</strong> Detects elbow angle changes for bicep curls.</li>
+                        <li><strong>Free Play Mode:</strong> Skeleton overlay without rep counting for practicing form.</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3>Progress Tracking</h3>
+                    <ul>
+                        <li><strong>Daily Tracker:</strong> Shows today’s total reps per exercise in a simple report.</li>
+                        <li><strong>Streak Tracking:</strong> Tracks consecutive days of workouts and resets if missed.</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3>AI-Powered</h3>
+                    <ul>
+                        <li><strong>AI Fitness Analyzer:</strong> Collects user data and workout logs for personalized insights.</li>
+                        <li><strong>Tutorial Slides:</strong> Step-by-step guide on camera placement and exercise setup.</li>
+                    </ul>
+                </div>
             </div>
         </section>
-
-        <section id="technical">
+        
+        <section>
             <h2>Technical Details</h2>
-            <div class="feature">
-                <h3>Pose Detection</h3>
-                <ul>
-                    <li>Built on Google ML Kit’s pose detection (real-time skeleton tracking).</li>
-                    <li>Supports major landmarks: shoulders, elbows, wrists, hips, knees, ankles.</li>
-                    <li>Handles rotations & YUV420 → NV21 conversion for camera frames.</li>
-                </ul>
-            </div>
-            <div class="feature">
-                <h3>Repetition Counting</h3>
-                <ul>
-                    <li><strong>Push-ups:</strong> Down → Up transitions with cooldown.</li>
-                    <li><strong>Pull-ups:</strong> Distance thresholds vs. shoulder–hip baseline.</li>
-                    <li><strong>Squats:</strong> Knee angles (below 100° = down, above 160° = up).</li>
-                    <li><strong>Curls:</strong> Elbow angles (below 70° = up, above 150° = down).</li>
-                </ul>
-            </div>
-             <div class="feature">
-                <h3>Local Data Storage</h3>
-                <ul>
-                    <li>SharedPreferences for exercise logs & streak data.</li>
-                </ul>
+            <div id="features">
+                <div class="feature">
+                    <h3>Pose Detection</h3>
+                    <ul>
+                        <li>Built on Google ML Kit’s pose detection for real-time skeleton tracking.</li>
+                        <li>Supports major landmarks: shoulders, elbows, wrists, hips, knees, ankles.</li>
+                        <li>Handles camera frame rotations and format conversions.</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3>Repetition Counting</h3>
+                    <ul>
+                        <li><strong>Push-ups:</strong> Down → Up transitions with cooldown.</li>
+                        <li><strong>Pull-ups:</strong> Distance thresholds vs. shoulder–hip baseline.</li>
+                        <li><strong>Squats:</strong> Knee angles (below 100° = down, above 160° = up).</li>
+                        <li><strong>Curls:</strong> Elbow angles (below 70° = up, above 150° = down).</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3>Local Data Storage</h3>
+                    <ul>
+                        <li>SharedPreferences for exercise logs & streak data.</li>
+                    </ul>
+                </div>
             </div>
         </section>
-
-        <section id="tech-stack">
+        
+        <section>
             <h2>Tech Stack</h2>
-            <div class="feature">
-                <ul>
-                    <li><strong>Frontend:</strong> Flutter</li>
-                    <li><strong>ML & Vision:</strong> Google ML Kit Pose Detection</li>
-                    <li><strong>Persistence:</strong> SharedPreferences</li>
-                    <li><strong>Backend (AI Analysis):</strong> REST API</li>
-                </ul>
+            <div id="features">
+                <div class="feature">
+                    <ul>
+                        <li><strong>Frontend:</strong> Flutter</li>
+                        <li><strong>ML & Vision:</strong> Google ML Kit Pose Detection</li>
+                        <li><strong>Persistence:</strong> SharedPreferences</li>
+                        <li><strong>Backend (AI Analysis):</strong> REST API</li>
+                    </ul>
+                </div>
             </div>
         </section>
-
+        
         <section id="download">
             <a href="https://github.com/My-Mation/RepBot-apk/releases/download/v1.0.0/app-release.apk" id="download-btn" download>Download RepBot APK</a>
         </section>
-
+        
         <footer>
-            <p>&copy; 2023 RepBot. Built with Flutter and AI. View on <a href="https://github.com/My-Mation/fitness-app" target="_blank">GitHub</a></p>
+            <p>&copy; 2023 RepBot. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | View on <a href="https://github.com/My-Mation/RepBot-apk" target="_blank">GitHub</a></p>
         </footer>
     </div>
 </body>
