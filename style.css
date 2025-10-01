@@ -220,6 +220,31 @@ li strong {
     transform: translateY(-3px);
 }
 
+#download-small {
+    text-align: center;
+    padding-top: 2rem;
+}
+
+#download-btn-small {
+    background-color: #64ffda; /* Cyan accent */
+    color: #0a192f; /* Dark Blue */
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+}
+
+#download-btn-small:hover {
+    background-color: #52d8bA;
+    transform: translateY(-3px);
+}
+
 footer {
     text-align: center;
     padding: 2.5rem 0;
@@ -279,6 +304,14 @@ footer a:hover {
     h2 {
         font-size: 2.2rem;
         margin-bottom: 3rem;
+    }
+
+    #about h2 {
+        font-size: 2rem;
+    }
+
+    #about p {
+        font-size: 1rem;
     }
 
     section {
