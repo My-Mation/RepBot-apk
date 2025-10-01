@@ -6,11 +6,18 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding-top: 60px; /* Account for fixed navbar */
+    padding: 0;
     background-color: #0a192f; /* Dark Blue */
     color: #ccd6f6; /* Light Slate */
     line-height: 1.7;
     overflow-x: hidden;
+}
+
+.site-wrapper {
+    max-width: 1600px;
+    margin: 0 auto;
+    background-color: #112240; /* Lighter Navy for the content area */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -29,7 +36,6 @@ body {
     width: 100%;
     z-index: 1000;
     box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
-    transition: top 0.3s;
 }
 
 .navbar .container {
@@ -68,7 +74,7 @@ body {
 
 header {
     text-align: center;
-    padding: 8rem 0 6rem;
+    padding: 12rem 0 8rem;
     min-height: 60vh;
     display: flex;
     flex-direction: column;
@@ -195,29 +201,30 @@ li strong {
 }
 
 #download-btn {
-    background-color: transparent;
-    color: #64ffda; /* Cyan accent */
-    border: 2px solid #64ffda;
-    padding: 1.3rem 2.8rem;
-    font-size: 1.5rem;
+    background-color: #64ffda; /* Cyan accent */
+    color: #0a192f; /* Dark Blue */
+    border: none;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
     font-weight: 700;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
     text-decoration: none;
 }
 
 #download-btn:hover {
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: #52d8bA;
+    transform: translateY(-3px);
 }
 
 footer {
     text-align: center;
     padding: 2.5rem 0;
     color: #8892b0; /* Slate */
-    border-top: 1px solid #112240; /* Lighter Navy */
+    border-top: 1px solid #0a192f; /* Dark Blue */
 }
 
 footer a {
@@ -231,6 +238,18 @@ footer a:hover {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 2.8rem;
+    }
+    header p {
+        font-size: 1.6rem;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         padding-top: 50px;
@@ -246,7 +265,7 @@ footer a:hover {
     }
 
     header {
-        padding: 6rem 0 4rem;
+        padding: 8rem 0 6rem;
     }
 
     header h1 {
@@ -258,7 +277,7 @@ footer a:hover {
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
         margin-bottom: 3rem;
     }
 
