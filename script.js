@@ -1,5 +1,6 @@
 window.addEventListener('load', () => {
     const splashScreen = document.getElementById('splash-screen');
+    const mainContent = document.getElementById('main-content');
 
     setTimeout(() => {
         splashScreen.style.opacity = 0;
@@ -8,5 +9,6 @@ window.addEventListener('load', () => {
 
     setTimeout(() => {
         splashScreen.style.display = 'none';
-    }, 5000); // Then hide it completely
+        mainContent.style.opacity = 1;
+    }, 5000); // Then hide it completely and fade in the main content
 });
