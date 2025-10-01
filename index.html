@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RepBot - AI-Powered Fitness Tracking App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>RepBot</h1>
+        <p>AI-Powered Fitness Tracking Application</p>
+    </header>
+
+    <section id="intro">
+        <h2>About RepBot</h2>
+        <p>RepBot is a Flutter app that uses AI-powered pose detection to automatically count exercise repetitions in real-time via the device's camera. Track your workouts effortlessly with advanced machine learning technology.</p>
+    </section>
+
+    <section id="features">
+        <h2>Core Features</h2>
+
+        <div class="feature">
+            <h3>Exercise Counters</h3>
+            <ul>
+                <li><strong>Push-up Counter:</strong> Tracks push-ups by detecting shoulder and collarbone movement. Counts reps with a 1-second cooldown.</li>
+                <li><strong>Pull-up Counter:</strong> Monitors pull-ups by calculating distance between body center and hands.</li>
+                <li><strong>Squat Counter:</strong> Uses knee angle calculations to detect squats.</li>
+                <li><strong>Dumbbell Curl Counter:</strong> Tracks bicep curls by measuring elbow angles.</li>
+            </ul>
+            <p>Each counter includes live rep count, camera preview with skeleton overlay, status text, FPS, and diagnostics.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Free Play Mode</h3>
+            <p>A practice mode with camera preview and full-body skeleton overlay, perfect for form practice without tracking.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Daily Tracker</h3>
+            <p>Displays today's total reps for each exercise in a dialog. Updates dynamically after workouts.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Streak Tracking</h3>
+            <p>Calculates and displays your current exercise streak. Shows historical logs with details.</p>
+        </div>
+
+        <div class="feature">
+            <h3>AI Fitness Analyzer</h3>
+            <p>Collects user data and sends to a backend API for personalized AI analysis and feedback.</p>
+        </div>
+
+        <div class="feature">
+            <h3>Tutorial</h3>
+            <p>Interactive slideshow with instructions for each exercise and AI analysis.</p>
+        </div>
+    </section>
+
+    <section id="technical">
+        <h2>Technical Features</h2>
+        <ul>
+            <li>Google ML Kit Pose Detection for real-time skeleton tracking</li>
+            <li>Local data logging and storage using SharedPreferences</li>
+            <li>Front camera processing with high resolution</li>
+            <li>Dark theme UI with responsive design</li>
+            <li>Wakelock to prevent screen timeout</li>
+            <li>Debug mode and error handling</li>
+        </ul>
+    </section>
+
+    <section id="download">
+        <h2>Download RepBot APK</h2>
+        <button id="download-btn">Download APK</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 RepBot. Built with Flutter and AI.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
