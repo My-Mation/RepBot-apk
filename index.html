@@ -5,81 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RepBot - AI-Powered Fitness Tracking App</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header>
-        <h1>RepBot</h1>
-        <p>AI-Powered Fitness Tracking Application</p>
-    </header>
-
-    <section id="intro">
-        <h2>About RepBot</h2>
-        <p>RepBot is a Flutter app that uses AI-powered pose detection to automatically count exercise repetitions in real-time via the device's camera. Track your workouts effortlessly with advanced machine learning technology.</p>
-    </section>
-
-    <section id="features">
-        <h2>Core Features</h2>
-
-        <div class="feature">
-            <h3>Exercise Counters</h3>
-            <ul>
-                <li><strong>Push-up Counter:</strong> Tracks push-ups by detecting shoulder and collarbone movement. Counts reps with a 1-second cooldown.</li>
-                <li><strong>Pull-up Counter:</strong> Monitors pull-ups by calculating distance between body center and hands.</li>
-                <li><strong>Squat Counter:</strong> Uses knee angle calculations to detect squats.</li>
-                <li><strong>Dumbbell Curl Counter:</strong> Tracks bicep curls by measuring elbow angles.</li>
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">RepBot</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#technical">Technical</a></li>
+                <li><a href="#download">Download</a></li>
             </ul>
-            <p>Each counter includes live rep count, camera preview with skeleton overlay, status text, FPS, and diagnostics.</p>
         </div>
+    </nav>
 
-        <div class="feature">
-            <h3>Free Play Mode</h3>
-            <p>A practice mode with camera preview and full-body skeleton overlay, perfect for form practice without tracking.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Daily Tracker</h3>
-            <p>Displays today's total reps for each exercise in a dialog. Updates dynamically after workouts.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Streak Tracking</h3>
-            <p>Calculates and displays your current exercise streak. Shows historical logs with details.</p>
-        </div>
-
-        <div class="feature">
-            <h3>AI Fitness Analyzer</h3>
-            <p>Collects user data and sends to a backend API for personalized AI analysis and feedback.</p>
-        </div>
-
-        <div class="feature">
-            <h3>Tutorial</h3>
-            <p>Interactive slideshow with instructions for each exercise and AI analysis.</p>
-        </div>
-    </section>
-
-    <section id="technical">
-        <h2>Technical Features</h2>
-        <ul>
-            <li>Google ML Kit Pose Detection for real-time skeleton tracking</li>
-            <li>Local data logging and storage using SharedPreferences</li>
-            <li>Front camera processing with high resolution</li>
-            <li>Dark theme UI with responsive design</li>
-            <li>Wakelock to prevent screen timeout</li>
-            <li>Debug mode and error handling</li>
-        </ul>
-    </section>
-
-    <section id="download">
-        <a href="https://github.com/My-Mation/RepBot-apk/releases/download/v1.0.0/app-release.apk" download>
-            Download RepBot APK
-        </a>
-
-    </section>
-
-    <footer>
-        <p>&copy; 2023 RepBot. Built with Flutter and AI.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="container">
+        <header>
+            <img src="/logo.png" alt="RepBot Logo" class="logo">
+            <h1>RepBot</h1>
+            <p>Your AI-powered companion for smarter, more effective workouts.</p>
+        </header>
+        
+        <main>
+            <section id="about">
+                <h2>About RepBot</h2>
+                <p>RepBot is a cutting-edge fitness application that transforms your device’s camera into a personal trainer. Using advanced AI-powered pose detection, it automatically counts your exercise repetitions in real-time. Whether you're a beginner focusing on form or an expert tracking your progress, RepBot provides the tools you need for a complete fitness experience.</p>
+            </section>
+            
+            <section id="features">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3><i class="fas fa-dumbbell"></i> Automated Rep Counting</h3>
+                        <p>Focus on your workout, not on counting. Our AI handles the rep counting for you across a variety of exercises, ensuring accuracy and letting you concentrate on your form.</p>
+                        <ul>
+                            <li><strong>Push-up Counter:</strong> Tracks reps by analyzing your shoulder, collarbone, and ankle positions.</li>
+                            <li><strong>Pull-up Counter:</strong> Measures hand-to-body distance to accurately track every pull-up.</li>
+                            <li><strong>Squat Counter:</strong> Monitors knee angles to ensure proper squat form and depth.</li>
+                            <li><strong>Dumbbell Curl Counter:</strong> Detects elbow angle changes for precise bicep curl tracking.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3><i class="fas fa-chart-line"></i> Track Your Progress</h3>
+                        <p>Stay motivated by seeing how far you've come. RepBot provides simple, intuitive tools to monitor your daily efforts and long-term achievements.</p>
+                        <ul>
+                            <li><strong>Daily Tracker:</strong> Get a clear summary of your total reps for each exercise at the end of the day.</li>
+                            <li><strong>Streak Tracking:</strong> Build momentum with our streak feature that tracks consecutive workout days.</li>
+                            <li><strong>Free Play Mode:</strong> Practice your form with a real-time skeleton overlay without the pressure of rep counting.</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3><i class="fas fa-robot"></i> AI-Powered Insights</h3>
+                        <p>Go beyond simple tracking. RepBot uses AI to analyze your workout data, offering personalized recommendations to help you reach your fitness goals faster.</p>
+                        <ul>
+                            <li><strong>AI Fitness Analyzer:</strong> Receive personalized insights based on your workout logs and performance.</li>
+                            <li><strong>Tutorial Slides:</strong> Learn the correct setup for each exercise with our easy-to-follow visual guides.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="technical">
+                <h2>Technical Details</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3><i class="fas fa-cogs"></i> Real-Time Pose Detection</h3>
+                        <p>At the core of RepBot is Google's ML Kit, which provides robust, real-time skeleton tracking directly on your device, ensuring your data remains private and your workouts are tracked instantly.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3><i class="fas fa-calculator"></i> Advanced Repetition Logic</h3>
+                        <p>Our custom algorithms analyze the pose data to count reps with high accuracy, using specific joint angles and body positions to identify correct and completed movements for each exercise.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <h3><i class="fas fa-database"></i> Secure & Private</h3>
+                        <p>All your workout data is stored locally on your device using SharedPreferences. We do not collect or store any of your personal information, ensuring your fitness journey is completely private.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="tech-stack">
+                <h2>Tech Stack</h2>
+                <div class="features-grid">
+                    <div class="feature tech-stack-feature">
+                        <ul>
+                            <li><i class="fab fa-flutter"></i> Frontend: Flutter</li>
+                            <li><i class="fas fa-microchip"></i> ML & Vision: Google ML Kit</li>
+                            <li><i class="fas fa-save"></i> Persistence: SharedPreferences</li>
+                            <li><i class="fas fa-server"></i> Backend (AI Analysis): REST API</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="download">
+                <a href="https://github.com/My-Mation/RepBot-apk/releases/download/v1.0.0/app-release.apk" id="download-btn" download>Download RepBot APK</a>
+            </section>
+        </main>
+        
+        <footer>
+            <p>&copy; 2023 RepBot. All rights reserved. | <a href="privacy-policy.html">Privacy Policy</a> | View on <a href="https://github.com/My-Mation/RepBot-apk" target="_blank">GitHub</a></p>
+        </footer>
+    </div>
 </body>
 </html>
